@@ -6,6 +6,7 @@ import cartIcon from './assets/img/icon-header-02.png'
 import './assets/vendor/bootstrap/css/bootstrap.css'
 import './assets/vendor/css-hamburgers/hamburgers.css'
 import './assets/css/main.css'
+import './assets/css/uikit.min.css'
 import './assets/css/util.css'
 import './App.css';
 import MainContent from "./components/MainContent";
