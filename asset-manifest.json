@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.79966156.css",
-  "main.css.map": "static/css/main.79966156.css.map",
-  "main.js": "static/js/main.e55a3a3d.js",
-  "main.js.map": "static/js/main.e55a3a3d.js.map",
+  "main.css": "static/css/main.bdab8eb7.css",
+  "main.css.map": "static/css/main.bdab8eb7.css.map",
+  "main.js": "static/js/main.cc642404.js",
+  "main.js.map": "static/js/main.cc642404.js.map",
   "static/media/Linearicons-Free.ttf": "static/media/Linearicons-Free.2f3e9f80.ttf",
   "static/media/Montserrat-Black.ttf": "static/media/Montserrat-Black.6d1796a9.ttf",
   "static/media/Montserrat-Bold.ttf": "static/media/Montserrat-Bold.88932dad.ttf",
@@ -10,5 +10,6 @@
   "static/media/Montserrat-Medium.ttf": "static/media/Montserrat-Medium.a98626e1.ttf",
   "static/media/Montserrat-Regular.ttf": "static/media/Montserrat-Regular.9c460951.ttf",
   "static/media/Poppins-Black.ttf": "static/media/Poppins-Black.8971d171.ttf",
-  "static/media/Poppins-Bold.ttf": "static/media/Poppins-Bold.7940efc4.ttf"
+  "static/media/Poppins-Bold.ttf": "static/media/Poppins-Bold.7940efc4.ttf",
+  "static/media/werise-portfolio.jpg": "static/media/werise-portfolio.1b4f3877.jpg"
 }
