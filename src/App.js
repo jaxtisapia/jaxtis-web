@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import jaxtisLogo from './assets/img/jaxtis-logo.png'
 import userIcon from './assets/img/icon-header-01.png'
 import cartIcon from './assets/img/icon-header-02.png'
@@ -10,12 +11,43 @@ import './assets/css/uikit.min.css'
 import './assets/css/util.css'
 import './App.css';
 import MainContent from "./components/MainContent";
+import Hamburger from "react-hamburgers";
+
+let webConfig = require('./config/profile').configuration;
+let routeList = require('./components/route/routes');
 
 class App extends Component {
+
+    constructor(props){
+        super(props);
+        this.toggleMobileViewMenu = this.toggleMobileViewMenu.bind(this);
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+
+        this.state = {hamburgerActive:false, windowWidth:0}
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        this.setState({ windowWidth: window.innerWidth });
+        console.log(this.state.windowWidth)
+    }
+
+    toggleMobileViewMenu(){
+        this.setState({ hamburgerActive: !this.state.hamburgerActive })
+    }
+
   render() {
     return (
+        <Router>
       <div className="">
-       <body className="animsition">
 
           {/* Header  */}
           <header className="header3">
@@ -24,20 +56,20 @@ class App extends Component {
                   <div className="wrap_header3 p-t-74">
                       {/* Logo  */}
                       <a href="" className="logo3">
-                          <img src={jaxtisLogo} alt="IMG-LOGO"/>
+                          <img className='uk-flex uk-flex-center' src={jaxtisLogo} alt="IMG-LOGO"/>
                       </a>
 
                       {/* Header Icon  */}
-                      <div className="header-icons3 p-t-38 p-b-60 p-l-8">
-                          <a href="" className="header-wrapicon1 dis-block">
+                      <div className="uk-flex uk-flex-center header-icons3 p-t-38 p-b-60 p-l-8">
+                          <a href="" className="header-wrapicon1 dis-block" title="View my Profile" uk-tooltip='true'>
                               <img src={userIcon} className="header-icon1" alt="ICON"/>
                           </a>
 
                           <span className="linedivide1"/>
 
-                          <div className="header-wrapicon2">
+                          <div className="header-wrapicon2" title={`${webConfig.personalProjects.length} incomplete personal projects`} uk-tooltip="true">
                               <img src={cartIcon} className="header-icon1 js-show-header-dropdown" alt="ICON"/>
-                                  <span className="header-icons-noti">0</span>
+                                  <span className="header-icons-noti">{webConfig.personalProjects.length}</span>
                           </div>
                       </div>
 
@@ -46,33 +78,33 @@ class App extends Component {
                           <nav className="menu">
                               <ul className="main_menu">
                                   <li>
-                                      <a href="">Home</a>
+                                      <Link to={routeList.home}>Home</Link>
                                   </li>
 
                                   <li>
-                                      <a href="">Personal Projects</a>
+                                      <Link to={routeList.projects}>Personal Projects</Link>
                                       <ul className="sub_menu">
-                                          <li><a href="">Bet Prediction Project</a></li>
-                                          <li><a href="">Live Lottery App</a></li>
-                                          <li><a href="">Community Based Social Media Platform</a></li>
-                                          <li><a href="">Africa WebApps Vulnerability Research</a></li>
+
+                                          {webConfig.personalProjects.map(function (project) {
+                                              return  <li key={project.id}><Link to={`${project.id}`}>{project.title}</Link></li>
+                                          })}
+
                                       </ul>
                                   </li>
 
                                   <li>
-                                      <a href="">Portfolio</a>
+                                      <Link to={routeList.portfolio}>Portfolio</Link>
                                   </li>
 
-                                  <li>
-                                      <a href="">My Profile</a>
+                                  <li><Link to={routeList.profile}>My Profile</Link>
                                   </li>
 
                                   <li className="sale-noti">
-                                      <a href="">Car Diagnostics (NEW)</a>
+                                      <Link to={routeList.carDiagnostics}>Car Diagnostics (NEW)</Link>
                                   </li>
 
                                   <li>
-                                      <a href="">Send me a message</a>
+                                      <Link to={routeList.contact}>Send me a message</Link>
                                   </li>
                               </ul>
                           </nav>
@@ -112,16 +144,23 @@ class App extends Component {
                           </div>
                       </div>
 
-                      <div className="btn-show-menu-mobile hamburger hamburger--squeeze">
-					<span className="hamburger-box">
-						<span className="hamburger-inner"/>
-					</span>
+                      {/*<div className="btn-show-menu-mobile hamburger hamburger--squeeze">*/}
+					{/*<span className="hamburger-box">*/}
+						{/*<span className="hamburger-inner"/>*/}
+					{/*</span>*/}
+                      {/*</div>*/}
+
+                      <div className='btn-show-menu-mobile'>
+                          <Hamburger active={this.state.hamburgerActive}  type="slider"
+                                     onClick={this.toggleMobileViewMenu}
+                          />
                       </div>
+
                   </div>
               </div>
 
               {/* Menu Mobile  */}
-              <div className="wrap-side-menu" >
+              <div className={`wrap-side-menu ${((this.state.hamburgerActive && this.state.windowWidth <= 992) ? 'mobile-menu-active' : 'mobile-menu-inactive')}`} >
                   <nav className="side-menu">
                       <ul className="main-menu">
                           <li className="item-topbar-mobile p-l-20 p-t-8 p-b-8">
@@ -152,11 +191,11 @@ class App extends Component {
                           </li>
 
                           <li className="item-menu-mobile">
-                              <a href="">Features</a>
+                             <Link to={'features'}>Features</Link>
                           </li>
 
                           <li className="item-menu-mobile">
-                              <a href="">Contact Us</a>
+                              <Link to={'contact'}>Contact Us</Link>
                           </li>
                       </ul>
                   </nav>
@@ -175,8 +214,8 @@ class App extends Component {
           {/* Container Selection1  */}
           <div id="dropDownSelect1"/>
 
-          </body>
-      </div>
+          </div>
+        </Router>
     );
   }
 }

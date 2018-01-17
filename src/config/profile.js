@@ -69,7 +69,7 @@ let configuration = {
             },
         ]
     },
-     portfolio:[
+    portfolio:[
          {
              title:'WeRise Foundation - Ghana (Company Website)',
              description:'WERISE Foundation is a Non-Governmental Organisation that advocates for persons with disabilities, kids with special needs and orphans, by assisting them with the necessary resources, to create an all inclusive environment.',
@@ -82,7 +82,37 @@ let configuration = {
              link:'http://www.werisefoundationgh.com/',
              image: weriseImage
          },
-     ]
+     ],
+    personalProjects:[
+        {
+            id:'bet-predictor',
+            title:'Bet Prediction Project',
+            image:'',
+            descriptions:[''],
+            link:''
+        },
+        {
+            id:'live-lottery',
+            title:'Live Lottery App',
+            image:'',
+            descriptions:[''],
+            link:''
+        },
+        {
+            id:'community-social-media',
+            title:'Community-Based Social Media App',
+            image:'',
+            descriptions:[''],
+            link:''
+        },
+        {
+            id:'webapps-research',
+            title:'African Web Apps Vulnerability Research',
+            image:'',
+            descriptions:[''],
+            link:''
+        },
+    ]
  };
 
 module.exports = {

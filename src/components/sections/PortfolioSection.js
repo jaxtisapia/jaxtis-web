@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PortfolioItem from "../item/PortfolioItem";
-let webConfiguration = require('../config/profile').configuration;
+let webConfiguration = require('../../config/profile').configuration;
 
 
 export default class PortfolioSection extends Component{

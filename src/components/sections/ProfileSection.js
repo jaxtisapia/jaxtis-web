@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import EducationItem from "../item/ProfileItem";
-let webConfiguration = require('../config/profile').configuration;
+let webConfiguration = require('../../config/profile').configuration;
 
 export default class ProfileSection extends Component{
 
