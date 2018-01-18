@@ -7,28 +7,33 @@ import CarDiagSection from "./sections/CarDiagSection";
 import ContactSection from "./sections/ContactSection";
 import ComingSoonSection from "./sections/ComingSoonSection";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import HomeSection from "./sections/HomeSection";
 
 let routeList = require('./route/routes');
 
 export default class MainContent extends  Component{
+
+    constructor(props){
+        super(props);
+    }
+
+
     render(){
         return (
-            <Router>
-            <div className="">
+            <div className="container1-page">
 
-                <div className="main-pager">
-                    <Route exact path="/" component={ComingSoonSection}/>
-                    <Route path={routeList.home} component={ComingSoonSection}/>
-                    <Route path={routeList.profile} component={ProfileSection}/>
-                    <Route path={routeList.contact} component={ContactSection}/>
-                    <Route path={routeList.portfolio} component={PortfolioSection}/>
-                    <Route path={routeList.projects} component={PersonalProjectSection}/>
-                    <Route path={routeList.carDiagnostics} component={CarDiagSection}/>
-               </div>
+                <div className='main-pager'>
+                <Route exact path="/" component={HomeSection}/>
+                <Route path={`/${routeList.home}`} component={HomeSection} />
+                <Route path={`/${routeList.profile}`} component={ProfileSection} />
+                <Route path={`/${routeList.contact}`} component={ContactSection} />
+                <Route path={`/${routeList.carDiagnostics}`} component={CarDiagSection} />
+                <Route path={`/${routeList.projects}`} component={PersonalProjectSection} />
+                <Route path={`/${routeList.portfolio}`} component={PortfolioSection} />
+                </div>
 
-                 <Footer/>
+                <Footer/>
             </div>
-            </Router>
         )
     }
 }

@@ -3,13 +3,24 @@ import React, {Component} from 'react'
 export default class ContactSection extends Component{
     render(){
         return (
-            <section>
-                <div className="uk-column-1-2 uk-column-divider">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <section className='uk-section'>
 
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div className="uk-container uk-container-small">
+                    <h3>GET IN TOUCH</h3>
 
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                    <div>
+                    <p>Want to make enquiries on any of my personal projects?</p>
+                    <p>Want help on any of your own projects too?</p>
+                    <p>Need help securing your mobile app or website from attackers? I have minimal and 'unprofessional' information and experience</p>
+                    <p>Want to make enquiries on CAR DIAGNOSTICS and any other related issues?</p>
+                    <p>Any other general enquiries?</p>
+                    </div>
+
+                    <div>
+                        <p> Contact me via any of the options below:</p>
+                    <p className='uk-text-large uk-text-bold'> jaxtis.apia@gmail.com</p>
+                        <p className='uk-text-large uk-text-bold'>+233 27 892 5201</p>
+                    </div>
                 </div>
             </section>
         )

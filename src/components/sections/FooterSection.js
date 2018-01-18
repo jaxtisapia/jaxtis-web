@@ -8,7 +8,7 @@ export default class FooterSection extends Component{
                 <div className="t-center p-l-15 p-r-15">
 
                     <div className="t-center s-text8 p-t-20">
-                        In © 2018 with <i className="fa fa-heart-o" aria-hidden="true"/> love
+                        In © 2018 with <i className="fa fa-heart-o" aria-hidden="true"/> L-o-L
                     </div>
                 </div>
             </footer>

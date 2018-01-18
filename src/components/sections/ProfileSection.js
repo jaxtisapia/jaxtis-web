@@ -1,39 +1,52 @@
 import React, {Component} from 'react';
-import EducationItem from "../item/ProfileItem";
+import ProfileItem from "../item/ProfileItem";
+import Collapsible from "react-collapsible";
 let webConfiguration = require('../../config/profile').configuration;
 
 export default class ProfileSection extends Component{
 
     render(){
         return (
-            <section id="profile">
-                <ul uk-accordion>
+            <section className='uk-section' id="profile">
+                <div className="uk-container uk-container-small">
+
+                        <ul uk-accordion>
+
                     <li>
-                        <a className="uk-accordion-title" href="#">Education</a>
+                        <Collapsible className='profile-header uk-text-uppercase' trigger="Education" open={true}>
+                            <div className='profile-opened'>
                         {webConfiguration.profile.education.map(function (ed) {
-                            return <EducationItem title={ed.institution} descriptions={[ed.course, ed.period]}/>
+                            return <ProfileItem  title={ed.institution} descriptions={[ed.course, ed.period]}/>
                         })}
+                            </div>
+                        </Collapsible>
                     </li>
 
                     <li>
-                        <a className="uk-accordion-title" href="#">Experience</a>
-                        <div className="uk-accordion-content">
+                        <Collapsible className='profile-header uk-text-uppercase' trigger="Experience" open={true}>
+                            <div className='profile-opened'>
+                            <div className="uk-accordion-content">
                             {webConfiguration.profile.experience.map(function (ex) {
-                                return <EducationItem title={ex.institution} descriptions={ex.descriptions}/>
+                                return <ProfileItem title={ex.institution} descriptions={ex.descriptions}/>
                             })}
-                        </div>
+                            </div></div>
+                        </Collapsible>
                     </li>
 
                     <li>
-                        <a className="uk-accordion-title" href="#">Skills and other Interests</a>
-                        <div className="uk-accordion-content">
+                        <Collapsible className='profile-header uk-text-uppercase' trigger="Skills and other Interests" open={true}>
+                            <div className='profile-opened'>
+                            <div className="uk-accordion-content">
                             {webConfiguration.profile.skill_interest.map(function (si) {
-                                return <EducationItem {...si}/>
+                                return <ProfileItem {...si}/>
                             })}
                         </div>
+                            </div>
+                        </Collapsible>
                     </li>
 
                 </ul>
+                </div>
             </section>
         )
     }

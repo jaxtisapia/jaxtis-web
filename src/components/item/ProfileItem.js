@@ -3,8 +3,8 @@ import React from 'react';
 const ProfileItem =(props)=>{
         return (
 
-            <div className="uk-accordion-content">
-                <p className="uk-text-lead uk-text-small uk-text-uppercase">{props.title}</p>
+            <div className="uk-accordion-content profile-opened-item">
+                <p className="uk-text-lead uk-text-small">{props.title}</p>
 
                 { props.descriptions.map(function (item) {
                         return <p>{item}</p> })}

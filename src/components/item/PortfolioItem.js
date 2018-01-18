@@ -2,16 +2,17 @@ import React from 'react'
 
 const PortfolioItem = (props) =>{
     return (
-            <div className="uk-card uk-card-default">
+            <div className="uk-card uk-card-default uk-margin-large card-squeezed" >
                 <div className="uk-card-media-top">
                     <img src={props.image} alt=""/>
                 </div>
                 <div className="uk-card-body">
-                    <h3 className="uk-card-title">{props.title}</h3>
+                    <p className="uk-card-title uk-text-uppercase medium-size-text">{props.title}</p>
                     <p>{props.description}</p>
 
-                    <a href={props.link} target='_blank'>View More</a>
-
+                </div>
+                <div className="uk-card-footer">
+                    <a href={props.link} target='_blank' className="uk-button uk-button-text">View More</a>
                 </div>
             </div>
 

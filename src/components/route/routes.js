@@ -5,6 +5,6 @@ let routes = {
     profile:'profile',
     projects:'projects',
     portfolio:'portfolio'
-};
+}
 
 module.exports = routes

@@ -12,6 +12,15 @@ import './assets/css/util.css'
 import './App.css';
 import MainContent from "./components/MainContent";
 import Hamburger from "react-hamburgers";
+import MobileMenuContent from "./components/MobileMenuContent";
+import MenuContent from "./components/sections/MenuContent";
+import HomeSection from "./components/sections/HomeSection";
+import ProfileSection from "./components/sections/ProfileSection";
+import FooterSection from "./components/sections/FooterSection";
+import PortfolioSection from "./components/sections/PortfolioSection";
+import PersonalProjectSection from "./components/sections/PersonalProjectSection";
+import CarDiagSection from "./components/sections/CarDiagSection";
+import ContactSection from "./components/sections/ContactSection";
 
 let webConfig = require('./config/profile').configuration;
 let routeList = require('./components/route/routes');
@@ -61,54 +70,23 @@ class App extends Component {
 
                       {/* Header Icon  */}
                       <div className="uk-flex uk-flex-center header-icons3 p-t-38 p-b-60 p-l-8">
-                          <a href="" className="header-wrapicon1 dis-block" title="View my Profile" uk-tooltip='true'>
+                          <Link to={routeList.profile} className="header-wrapicon1 dis-block" title="View my Profile" uk-tooltip='true'>
                               <img src={userIcon} className="header-icon1" alt="ICON"/>
-                          </a>
+                          </Link>
 
                           <span className="linedivide1"/>
 
                           <div className="header-wrapicon2" title={`${webConfig.personalProjects.length} incomplete personal projects`} uk-tooltip="true">
+                              <Link to={routeList.projects}>
                               <img src={cartIcon} className="header-icon1 js-show-header-dropdown" alt="ICON"/>
                                   <span className="header-icons-noti">{webConfig.personalProjects.length}</span>
+                              </Link>
                           </div>
                       </div>
 
                       {/* Menu  */}
-                      <div className="wrap_menu">
-                          <nav className="menu">
-                              <ul className="main_menu">
-                                  <li>
-                                      <Link to={routeList.home}>Home</Link>
-                                  </li>
+                      <MenuContent/>
 
-                                  <li>
-                                      <Link to={routeList.projects}>Personal Projects</Link>
-                                      <ul className="sub_menu">
-
-                                          {webConfig.personalProjects.map(function (project) {
-                                              return  <li key={project.id}><Link to={`${project.id}`}>{project.title}</Link></li>
-                                          })}
-
-                                      </ul>
-                                  </li>
-
-                                  <li>
-                                      <Link to={routeList.portfolio}>Portfolio</Link>
-                                  </li>
-
-                                  <li><Link to={routeList.profile}>My Profile</Link>
-                                  </li>
-
-                                  <li className="sale-noti">
-                                      <Link to={routeList.carDiagnostics}>Car Diagnostics (NEW)</Link>
-                                  </li>
-
-                                  <li>
-                                      <Link to={routeList.contact}>Send me a message</Link>
-                                  </li>
-                              </ul>
-                          </nav>
-                      </div>
                   </div>
 
                   <div className="bottombar flex-col-c p-b-65">
@@ -131,24 +109,20 @@ class App extends Component {
                   {/* Button show menu  */}
                   <div className="btn-show-menu">
                       {/* Header Icon mobile  */}
-                      <div className="header-icons-mobile">
-                          <a href="" className="header-wrapicon1 dis-block">
+                      <div className="header-icons-mobile" >
+                          <Link to={routeList.profile} className="header-wrapicon1 dis-block" title="View my Profile" uk-tooltip='true'>
                               <img src={userIcon} className="header-icon1" alt="ICON"/>
-                          </a>
+                          </Link>
 
                           <span className="linedivide2"/>
 
-                          <div className="header-wrapicon2">
+                          <div className="header-wrapicon2" title={`${webConfig.personalProjects.length} incomplete personal projects`} uk-tooltip="true">
+                              <Link to={routeList.projects}>
                               <img src={cartIcon} className="header-icon1 js-show-header-dropdown" alt="ICON"/>
-                                  <span className="header-icons-noti">0</span>
+                                  <span className="header-icons-noti">{webConfig.personalProjects.length}</span>
+                              </Link>
                           </div>
                       </div>
-
-                      {/*<div className="btn-show-menu-mobile hamburger hamburger--squeeze">*/}
-					{/*<span className="hamburger-box">*/}
-						{/*<span className="hamburger-inner"/>*/}
-					{/*</span>*/}
-                      {/*</div>*/}
 
                       <div className='btn-show-menu-mobile'>
                           <Hamburger active={this.state.hamburgerActive}  type="slider"
@@ -161,60 +135,14 @@ class App extends Component {
 
               {/* Menu Mobile  */}
               <div className={`wrap-side-menu ${((this.state.hamburgerActive && this.state.windowWidth <= 992) ? 'mobile-menu-active' : 'mobile-menu-inactive')}`} >
-                  <nav className="side-menu">
-                      <ul className="main-menu">
-                          <li className="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<span className="topbar-child1">
-							jaxtis.apia@gmail.com
-						</span>
-                          </li>
-                          <li className="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<span className="topbar-child1">
-							+233 27 892 5201
-						</span>
-                          </li>
-
-                          <li className="item-menu-mobile">
-                              <a href="">Home</a>
-                          </li>
-
-                          <li className="item-menu-mobile">
-                              <a href="">Products</a>
-                          </li>
-
-                          <li className="item-menu-mobile">
-                              <a href="">Quality Assurance</a>
-                          </li>
-
-                          <li className="item-menu-mobile">
-                              <a href="">Discount</a>
-                          </li>
-
-                          <li className="item-menu-mobile">
-                             <Link to={'features'}>Features</Link>
-                          </li>
-
-                          <li className="item-menu-mobile">
-                              <Link to={'contact'}>Contact Us</Link>
-                          </li>
-                      </ul>
-                  </nav>
+                <MobileMenuContent />
               </div>
           </header>
 
           <MainContent/>
 
-          {/* Back to top  */}
-          <div className="btn-back-to-top bg0-hov" id="myBtn">
-		<span className="symbol-btn-back-to-top">
-			<i className="fa fa-angle-double-up" aria-hidden="true"/>
-		</span>
-          </div>
+      </div>
 
-          {/* Container Selection1  */}
-          <div id="dropDownSelect1"/>
-
-          </div>
         </Router>
     );
   }
