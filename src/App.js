@@ -133,7 +133,7 @@ class App extends Component {
                   </div>
               </div>
 
-              {/* Menu Mobile  */}
+              {/* Menu Mobile - */}
               <div className={`wrap-side-menu ${((this.state.hamburgerActive && this.state.windowWidth <= 992) ? 'mobile-menu-active' : 'mobile-menu-inactive')}`} >
                 <MobileMenuContent />
               </div>
