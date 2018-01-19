@@ -6,8 +6,9 @@ import PersonalProjectSection from "./sections/PersonalProjectSection";
 import CarDiagSection from "./sections/CarDiagSection";
 import ContactSection from "./sections/ContactSection";
 import ComingSoonSection from "./sections/ComingSoonSection";
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import HomeSection from "./sections/HomeSection";
+import Page404Section from "./sections/Page404Section";
 
 let routeList = require('./route/routes');
 
@@ -23,6 +24,7 @@ export default class MainContent extends  Component{
             <div className="container1-page">
 
                 <div className='main-pager'>
+                    <Switch>
                 <Route exact path="/" component={HomeSection}/>
                 <Route path={`/${routeList.home}`} component={HomeSection} />
                 <Route path={`/${routeList.profile}`} component={ProfileSection} />
@@ -30,6 +32,10 @@ export default class MainContent extends  Component{
                 <Route path={`/${routeList.carDiagnostics}`} component={CarDiagSection} />
                 <Route path={`/${routeList.projects}`} component={PersonalProjectSection} />
                 <Route path={`/${routeList.portfolio}`} component={PortfolioSection} />
+
+                    <Route path='*' exact={true} component={Page404Section}/>
+                    </Switch>
+
                 </div>
 
                 <Footer/>

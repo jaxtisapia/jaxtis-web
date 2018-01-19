@@ -69,3 +69,13 @@
 .item-menu-mobile{
   background: #489b53;
 }
+
+.big-404{
+  font-size: 6em;
+  font-weight: 100;
+  color: #cecece;
+}
+
+.description-404{
+  font-size: 2em;
+}
