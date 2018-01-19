@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
+import {Link} from "react-router-dom";
 let webConfig = require('../../config/profile').configuration;
+
+let routeList = require('../route/routes');
 
 export default class HomeSection extends Component{
     render(){
@@ -23,10 +26,10 @@ export default class HomeSection extends Component{
 
                         <div className='uk-margin-medium-top'>
                             <ul className="uk-breadcrumb">
-                                <li><a href="#">My Portfolio</a></li>
-                                <li><a href="#">Make enquiries</a></li>
-                                <li><a href="#">View my profile</a></li>
-                                <li><a href="#">Checkout my private projects</a></li>
+                                <li><Link to={routeList.portfolio}>My Portfolio</Link></li>
+                                <li><Link to={routeList.contact}>Make enquiries</Link></li>
+                                <li><Link to={routeList.profile}>View my profile</Link></li>
+                                <li><Link to={routeList.projects}>Checkout my private projects</Link></li>
                             </ul>
                         </div>
 
