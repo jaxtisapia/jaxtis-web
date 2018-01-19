@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import jaxtisLogo from './assets/img/jaxtis-logo.png'
 import userIcon from './assets/img/icon-header-01.png'
 import cartIcon from './assets/img/icon-header-02.png'
