@@ -29,7 +29,8 @@ export default class MenuContent extends Component{
                             <Link to={routeList.portfolio}>Portfolio</Link>
                         </li>
 
-                        <li><Link to={routeList.profile}>My Profile</Link>
+                        <li>
+                            <Link to={routeList.profile}>My Profile</Link>
                         </li>
 
                         <li className="sale-noti">

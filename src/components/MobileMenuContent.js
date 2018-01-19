@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {Link} from "react-router-dom";
 
+let routeList = require('./route/routes');
+
 export default class MobileMenuContent extends Component{
     render(){
         return (
@@ -18,27 +20,27 @@ export default class MobileMenuContent extends Component{
                     </li>
 
                     <li className="item-menu-mobile">
-                        <a href="">Home</a>
+                        <Link to={routeList.home}>Home</Link>
                     </li>
 
                     <li className="item-menu-mobile">
-                        <a href="">Products</a>
+                        <Link to={routeList.projects}>Personal Projects</Link>
                     </li>
 
                     <li className="item-menu-mobile">
-                        <a href="">Quality Assurance</a>
+                        <Link to={routeList.portfolio}>Portfolio</Link>
                     </li>
 
                     <li className="item-menu-mobile">
-                        <a href="">Discount</a>
+                        <Link to={routeList.profile}>My Profile</Link>
                     </li>
 
                     <li className="item-menu-mobile">
-                        <Link to={'features'}>Features</Link>
+                        <Link to={routeList.carDiagnostics}>Car Diagnostics (NEW)</Link>
                     </li>
 
                     <li className="item-menu-mobile">
-                        <Link to={'contact'}>Contact Us</Link>
+                        <Link to={routeList.contact}>Send me a message</Link>
                     </li>
                 </ul>
             </nav>
