@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import jaxtisLogo from './assets/img/jaxtis-logo.png'
 import userIcon from './assets/img/icon-header-01.png'
@@ -14,25 +14,18 @@ import MainContent from "./components/MainContent";
 import Hamburger from "react-hamburgers";
 import MobileMenuContent from "./components/MobileMenuContent";
 import MenuContent from "./components/sections/MenuContent";
-import HomeSection from "./components/sections/HomeSection";
-import ProfileSection from "./components/sections/ProfileSection";
-import FooterSection from "./components/sections/FooterSection";
-import PortfolioSection from "./components/sections/PortfolioSection";
-import PersonalProjectSection from "./components/sections/PersonalProjectSection";
-import CarDiagSection from "./components/sections/CarDiagSection";
-import ContactSection from "./components/sections/ContactSection";
 
 let webConfig = require('./config/profile').configuration;
 let routeList = require('./components/route/routes');
 
 class App extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.toggleMobileViewMenu = this.toggleMobileViewMenu.bind(this);
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 
-        this.state = {hamburgerActive:false, windowWidth:0}
+        this.state = {hamburgerActive: false, windowWidth: 0}
     }
 
     componentDidMount() {
@@ -45,107 +38,124 @@ class App extends Component {
     }
 
     updateWindowDimensions() {
-        this.setState({ windowWidth: window.innerWidth });
+        this.setState({windowWidth: window.innerWidth});
         console.log(this.state.windowWidth)
     }
 
-    toggleMobileViewMenu(){
-        this.setState({ hamburgerActive: !this.state.hamburgerActive })
+    toggleMobileViewMenu() {
+        this.setState({hamburgerActive: !this.state.hamburgerActive})
     }
 
-  render() {
-    return (
-        <Router>
-      <div className="">
+    render() {
+        return (
+            <Router>
+                <div className="">
 
-          {/* Header  */}
-          <header className="header3">
-              {/* Header desktop  */}
-              <div className="container-menu-header-v3">
-                  <div className="wrap_header3 p-t-74">
-                      {/* Logo  */}
-                      <a href="" className="logo3">
-                          <img className='uk-flex uk-flex-center' src={jaxtisLogo} alt="IMG-LOGO"/>
-                      </a>
+                    {/* Header  */}
+                    <header className="header3">
 
-                      {/* Header Icon  */}
-                      <div className="uk-flex uk-flex-center header-icons3 p-t-38 p-b-60 p-l-8">
-                          <Link to={routeList.profile} className="header-wrapicon1 dis-block" title="View my Profile" uk-tooltip='true'>
-                              <img src={userIcon} className="header-icon1" alt="ICON"/>
-                          </Link>
+                        {/* Header desktop  */}
+                        <div className="container-menu-header-v3">
+                            <div className="wrap_header3 p-t-74">
 
-                          <span className="linedivide1"/>
+                                <a href="" className="logo3">
+                                    <img className='uk-flex uk-flex-center' src={jaxtisLogo} alt="IMG-LOGO"/>
+                                </a>
 
-                          <div className="header-wrapicon2" title={`${webConfig.personalProjects.length} incomplete personal projects`} uk-tooltip="true">
-                              <Link to={routeList.projects}>
-                              <img src={cartIcon} className="header-icon1 js-show-header-dropdown" alt="ICON"/>
-                                  <span className="header-icons-noti">{webConfig.personalProjects.length}</span>
-                              </Link>
-                          </div>
-                      </div>
+                                <div className="uk-flex uk-flex-center header-icons3 p-t-38 p-b-60 p-l-8">
+                                    <Link to={routeList.profile} className="header-wrapicon1 dis-block"
+                                          title="View my Profile" uk-tooltip='true'>
+                                        <img src={userIcon} className="header-icon1" alt="ICON"/>
+                                    </Link>
 
-                      {/* Menu  */}
-                      <MenuContent/>
+                                    <span className="linedivide1"/>
 
-                  </div>
+                                    <div className="header-wrapicon2"
+                                         title={`${webConfig.personalProjects.length} incomplete personal projects`}
+                                         uk-tooltip="true">
+                                        <Link to={routeList.projects}>
+                                            <img src={cartIcon} className="header-icon1 js-show-header-dropdown"
+                                                 alt="ICON"/>
+                                            <span
+                                                className="header-icons-noti">{webConfig.personalProjects.length}</span>
+                                        </Link>
+                                    </div>
 
-                  <div className="bottombar flex-col-c p-b-65">
+                                </div>
 
-                      <div>
-                          <p>jaxtis.apia@gmail.com</p>
-                          <p>+233 27 892 5201</p>
-                      </div>
+                                {/* Menu  */}
+                                <MenuContent/>
 
-                  </div>
-              </div>
+                            </div>
 
-              {/* Header Mobile  */}
-              <div className="wrap_header_mobile">
-                  {/* Logo moblie  */}
-                  <a href="" className="logo-mobile">
-                      <img src={jaxtisLogo} alt="IMG-LOGO"/>
-                  </a>
+                            <div className="bottombar flex-col-c p-b-65">
 
-                  {/* Button show menu  */}
-                  <div className="btn-show-menu">
-                      {/* Header Icon mobile  */}
-                      <div className="header-icons-mobile" >
-                          <Link to={routeList.profile} className="header-wrapicon1 dis-block" title="View my Profile" uk-tooltip='true'>
-                              <img src={userIcon} className="header-icon1" alt="ICON"/>
-                          </Link>
+                                <div>
+                                    <p>jaxtis.apia@gmail.com</p>
+                                    <p>+233 27 892 5201</p>
+                                </div>
 
-                          <span className="linedivide2"/>
+                            </div>
+                        </div>
+                        {/* End of Header desktop  */}
 
-                          <div className="header-wrapicon2" title={`${webConfig.personalProjects.length} incomplete personal projects`} uk-tooltip="true">
-                              <Link to={routeList.projects}>
-                              <img src={cartIcon} className="header-icon1 js-show-header-dropdown" alt="ICON"/>
-                                  <span className="header-icons-noti">{webConfig.personalProjects.length}</span>
-                              </Link>
-                          </div>
-                      </div>
 
-                      <div className='btn-show-menu-mobile'>
-                          <Hamburger active={this.state.hamburgerActive}  type="slider"
-                                     onClick={this.toggleMobileViewMenu}
-                          />
-                      </div>
+                        {/* Header Mobile  */}
+                        <div className="wrap_header_mobile">
 
-                  </div>
-              </div>
+                            <a href="" className="logo-mobile">
+                                <img src={jaxtisLogo} alt="IMG-LOGO"/>
+                            </a>
 
-              {/* Menu Mobile - */}
-              <div className={`wrap-side-menu ${((this.state.hamburgerActive && this.state.windowWidth <= 992) ? 'mobile-menu-active' : 'mobile-menu-inactive')}`} >
-                <MobileMenuContent />
-              </div>
-          </header>
+                            {/* Button show menu  */}
+                            <div className="btn-show-menu">
+                                {/* Header Icon mobile  */}
+                                <div className="header-icons-mobile">
+                                    <Link to={routeList.profile} className="header-wrapicon1 dis-block"
+                                          title="View my Profile" uk-tooltip='true'>
+                                        <img src={userIcon} className="header-icon1" alt="ICON"/>
+                                    </Link>
 
-          <MainContent/>
+                                    <span className="linedivide2"/>
 
-      </div>
+                                    <div className="header-wrapicon2"
+                                         title={`${webConfig.personalProjects.length} incomplete personal projects`}
+                                         uk-tooltip="true">
+                                        <Link to={routeList.projects}>
+                                            <img src={cartIcon} className="header-icon1 js-show-header-dropdown"
+                                                 alt="ICON"/>
+                                            <span
+                                                className="header-icons-noti">{webConfig.personalProjects.length}</span>
+                                        </Link>
+                                    </div>
+                                </div>
 
-        </Router>
-    );
-  }
+                                <div className='btn-show-menu-mobile'>
+                                    <Hamburger active={this.state.hamburgerActive} type="slider"
+                                               onClick={this.toggleMobileViewMenu}
+                                    />
+                                </div>
+
+                            </div>
+                        </div>
+                        {/* End of Header Mobile  */}
+
+                        {/* Menu Mobile - */}
+                        <div
+                            className={`wrap-side-menu ${((this.state.hamburgerActive && this.state.windowWidth <= 992) ? 'mobile-menu-active' : 'mobile-menu-inactive')}`}>
+                            <MobileMenuContent/>
+                        </div>
+                        {/* End of Menu Mobile - */}
+
+                    </header>
+
+                    <MainContent/>
+
+                </div>
+
+            </Router>
+        );
+    }
 }
 
 export default App;

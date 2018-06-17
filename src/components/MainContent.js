@@ -9,6 +9,7 @@ import ComingSoonSection from "./sections/ComingSoonSection";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import HomeSection from "./sections/HomeSection";
 import Page404Section from "./sections/Page404Section";
+import ResearchSection from "./sections/ResearchSection";
 
 let routeList = require('./route/routes');
 
@@ -31,6 +32,7 @@ export default class MainContent extends  Component{
                 <Route path={`/${routeList.contact}`} component={ContactSection} />
                 <Route path={`/${routeList.carDiagnostics}`} component={CarDiagSection} />
                 <Route path={`/${routeList.projects}`} component={PersonalProjectSection} />
+                {/*<Route path={`/${routeList.research}`} component={ResearchSection} />*/}
                 <Route path={`/${routeList.portfolio}`} component={PortfolioSection} />
 
                     <Route path='*' exact={true} component={Page404Section}/>

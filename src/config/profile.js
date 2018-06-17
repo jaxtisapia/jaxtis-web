@@ -1,4 +1,9 @@
 let weriseImage = require('../assets/img/werise-portfolio.jpg');
+let surgeImage = require('../assets/img/surgeGhanaBanner.jpg');
+let funnyOrNotBanner = require('../assets/img/funnyOrNotBanner.jpg');
+let gatsbyBanner = require('../assets/img/gatsbyBanner.jpg');
+let tickethouseBanner = require('../assets/img/tickethouseBanner.jpg');
+let totoBanner = require('../assets/img/totoBanner.jpg');
 
 let configuration = {
     profile:{
@@ -69,13 +74,66 @@ let configuration = {
             },
         ]
     },
+    research:[
+        {
+            id:'debit-card-api-review',
+            title:'Dangers of an exposed credit-card processing api',
+            image:'',
+            descriptions:[
+                'Before you read this, just understand that I do not seek to refer to any company or individual directly. ' +
+                'This piece is just an analysis of the discovery of a leaked credit-debit card processing api (or endpoint), and focus' +
+                ' on how this access can be of help to any malicious party',
+                'Have you ever wondered why most credit-debit card payment processors do not give direct access to api endpoints?',
+                'Have you realised most payment processors rather give you links to web pages; which then gives customers direct access to their systems to make payments',
+                'However, in a case where i can make simple api calls to a payment-processor, I should have a lot of advantages',
+                'Now stop imagining, lemme take you through this amazing possibility'
+            ],
+            link:'https://github.com/jaxtisapia/dangers-of-an-exposed-credit-card-processing-api'
+        }
+    ],
     portfolio:[
          {
              title:'WeRise Foundation - Ghana (Company Website)',
              description:'WERISE Foundation is a Non-Governmental Organisation that advocates for persons with disabilities, kids with special needs and orphans, by assisting them with the necessary resources, to create an all inclusive environment.',
              link:'http://www.werisefoundationgh.com/',
              image: weriseImage
-         }
+         },
+        {
+            // https://www.linkedin.com/in/rick-nord-a0404a20/
+             title:'SurgeGhana - Mobile App, Web App and Website',
+             description:'SurgeGhana (SurgeGH) is a donation platform. The platform basically links donors in cyclical returns. Project included a website, complex web applications and mobile application, which were all exclusively developed ground up under my supervision and direct involvement',
+            link: null,
+            image: surgeImage
+         },
+        {
+             title:'FunnyOrNot - Mobile App, UI/UX Design',
+             description:'FunnyOrNot is a joke sharing app. It aims to gather all of the world’s jokes, in whatever format; images, videos, soundbites, and text, into one simple social app. I handled extreme responsibilities of UI/UX design.',
+            link: "https://play.google.com/store/apps/details?id=com.funnyornot",
+            image: funnyOrNotBanner
+         },
+        {
+            title:'ToTo App - Backend Developer',
+            description:'ToTo is a joke sharing mobile app. It is exclusively supported only in French',
+            link: 'https://play.google.com/store/apps/details?id=com.yannick.opodame.toto',
+            image: totoBanner
+        },
+        {
+             title:'Gatsby Magazine - Mobile App, Web',
+             description:'The Gatsby Magazine is a unique online magazine that has captured the hearts of students as it contains everything that would prepare you for college academically, socially, morally, etc; including Fashion, Technology, and Lifestyle on campus.',
+            link: "https://play.google.com/store/apps/details?id=com.thegatsbymagazine",
+            image: gatsbyBanner
+         },
+        {
+            title:'School Management System (Opoku Ware Junior High School, Ghana) - Desktop App',
+            description:'An Examination Records Management Software that automatically handles rankings and promotions of students. Handles complex management of human resource and students in a simple offline database',
+            link: null,
+        },
+        {
+             title:'TicketHouse Ghana - UI Redesign',
+             description:'TicketHouse is a ticket purchasing platform. Know all the events happening around you and when and where they are happening. Events such as concerts, religious, sports, theater and movies in cinemas. THIS PROJECT HAS UNDERGONE VARIOUS SHIFTS IN INTERFACE DESIGN FROM OTHER UI DESIGNERS, AND MIGHT NOT BE A GOOD PORTFOLIO RECORD FOR ME.',
+            link: "https://play.google.com/store/apps/details?id=com.tickethousegh.app",
+            image: tickethouseBanner
+         },
      ],
     personalProjects:[
         {
@@ -87,7 +145,7 @@ let configuration = {
                 'Results of bets with relation to every match is also automatically pulled and updated by bots',
                 'Hidden within this data are lots of precious gems. Already found one of such gems - xD'
             ],
-            link:''
+            link:'https://github.com/jaxtisapia/sports-bet-data-analysis'
         },
         {
             id:'live-lottery',

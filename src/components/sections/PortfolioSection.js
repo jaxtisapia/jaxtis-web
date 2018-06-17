@@ -10,7 +10,7 @@ export default class PortfolioSection extends Component{
                 <div className="uk-container uk-container-small">
 
                     <h3 className='uk-text-uppercase'>My Portfolio</h3>
-                    <p>Not all completed works can be placed in portfolio. Many projects, according to contract, must not be attached to my personal portfolio. However, I have a few volunteer project(s) in my good books</p>
+                    <p>Not all completed works can be placed in portfolio. Many projects, according to contract, must not be attached to my personal portfolio. However, I have a few project(s)</p>
                     <hr className="uk-divider-icon"/>
 
                     <div className=''>

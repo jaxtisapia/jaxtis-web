@@ -10,7 +10,7 @@ const PersonalProjectItem =(props)=>{
             })}
 
             <div className="uk-card-footer">
-                <a href="#" className="uk-button uk-button-text">Read more</a>
+                <a href={(props.link==="")?"#": props.link} className="uk-button uk-button-text">Read more</a>
             </div>
         </div>
     )

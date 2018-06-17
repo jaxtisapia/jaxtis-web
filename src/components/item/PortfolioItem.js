@@ -12,7 +12,10 @@ const PortfolioItem = (props) =>{
 
                 </div>
                 <div className="uk-card-footer">
-                    <a href={props.link} target='_blank' className="uk-button uk-button-text">View More</a>
+                    {
+                         (props.link) ? <a href={props.link} target='_blank' className="uk-button uk-button-text">View More</a> : null
+                    }
+                    {/*<a href={props.link} target='_blank' className="uk-button uk-button-text">View More</a>*/}
                 </div>
             </div>
 

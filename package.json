@@ -11,7 +11,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17"
   },
-  "homepage": "http://jaxtisapia.github.io/jaxtis-web",
+  "homepage": "http://jaxtis.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

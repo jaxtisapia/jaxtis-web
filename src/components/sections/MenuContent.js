@@ -25,6 +25,10 @@ export default class MenuContent extends Component{
                             </ul>
                         </li>
 
+                        {/*<li>*/}
+                            {/*<Link to={routeList.research}>Cybersecurity Research</Link>*/}
+                        {/*</li>*/}
+
                         <li>
                             <Link to={routeList.portfolio}>Portfolio</Link>
                         </li>
