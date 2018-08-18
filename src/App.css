@@ -79,3 +79,9 @@
 .description-404{
   font-size: 2em;
 }
+
+.logo-centerise {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}

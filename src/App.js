@@ -59,7 +59,7 @@ class App extends Component {
                             <div className="wrap_header3 p-t-74">
 
                                 <a href="" className="logo3">
-                                    <img className='uk-flex uk-flex-center' src={jaxtisLogo} alt="IMG-LOGO"/>
+                                    <img className='logo-centerise' src={jaxtisLogo} alt="IMG-LOGO"/>
                                 </a>
 
                                 <div className="uk-flex uk-flex-center header-icons3 p-t-38 p-b-60 p-l-8">
