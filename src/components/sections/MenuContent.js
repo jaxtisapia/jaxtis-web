@@ -37,9 +37,9 @@ export default class MenuContent extends Component{
                             <Link to={routeList.profile}>My Profile</Link>
                         </li>
 
-                        <li className="sale-noti">
-                            <Link to={routeList.carDiagnostics}>Car Diagnostics (NEW)</Link>
-                        </li>
+                        {/*<li className="sale-noti">*/}
+                            {/*<Link to={routeList.carDiagnostics}>Car Diagnostics (NEW)</Link>*/}
+                        {/*</li>*/}
 
                         <li>
                             <Link to={routeList.contact}>Send me a message</Link>

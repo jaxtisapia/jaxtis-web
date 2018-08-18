@@ -30,7 +30,7 @@ export default class MainContent extends  Component{
                 <Route path={`/${routeList.home}`} component={HomeSection} />
                 <Route path={`/${routeList.profile}`} component={ProfileSection} />
                 <Route path={`/${routeList.contact}`} component={ContactSection} />
-                <Route path={`/${routeList.carDiagnostics}`} component={CarDiagSection} />
+                {/*<Route path={`/${routeList.carDiagnostics}`} component={CarDiagSection} />*/}
                 <Route path={`/${routeList.projects}`} component={PersonalProjectSection} />
                 {/*<Route path={`/${routeList.research}`} component={ResearchSection} />*/}
                 <Route path={`/${routeList.portfolio}`} component={PortfolioSection} />

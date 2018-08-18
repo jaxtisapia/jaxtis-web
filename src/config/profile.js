@@ -1,5 +1,6 @@
 let weriseImage = require('../assets/img/werise-portfolio.jpg');
 let surgeImage = require('../assets/img/surgeGhanaBanner.jpg');
+let prestigeImage = require('../assets/img/prestigeBanner.jpg');
 let funnyOrNotBanner = require('../assets/img/funnyOrNotBanner.jpg');
 let gatsbyBanner = require('../assets/img/gatsbyBanner.jpg');
 let tickethouseBanner = require('../assets/img/tickethouseBanner.jpg');
@@ -99,7 +100,11 @@ let configuration = {
              image: weriseImage
          },
         {
-            // https://www.linkedin.com/in/rick-nord-a0404a20/
+             title:'Prestige Donors Club - Web App',
+             description:'Prestige Donors Club (PDC) is a popular donation platform in Ghana (among elites in the banking sector). The platform is a pool that collects funds from its club members and disburses funds among club members accordingly. Project included a web app and an admin panel interfaced by a single backend developed with node js. All developments were  exclusively developed ground up under my supervision and direct involvement',
+            link: "http://prestigedonors.club",
+            image: prestigeImage
+         },{
              title:'SurgeGhana - Mobile App, Web App and Website',
              description:'SurgeGhana (SurgeGH) is a donation platform. The platform basically links donors in cyclical returns. Project included a website, complex web applications and mobile application, which were all exclusively developed ground up under my supervision and direct involvement',
             link: null,

@@ -35,9 +35,9 @@ export default class MobileMenuContent extends Component{
                         <Link to={routeList.profile}>My Profile</Link>
                     </li>
 
-                    <li className="item-menu-mobile">
-                        <Link to={routeList.carDiagnostics}>Car Diagnostics (NEW)</Link>
-                    </li>
+                    {/*<li className="item-menu-mobile">*/}
+                        {/*<Link to={routeList.carDiagnostics}>Car Diagnostics (NEW)</Link>*/}
+                    {/*</li>*/}
 
                     <li className="item-menu-mobile">
                         <Link to={routeList.contact}>Send me a message</Link>
