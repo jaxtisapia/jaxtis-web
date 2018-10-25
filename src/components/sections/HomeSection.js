@@ -16,16 +16,21 @@ export default class HomeSection extends Component {
 						<h2 className='name-text-greeting uk-visible@l uk-text-muted'>Hey there,</h2>
 						
 						<div className='uk-flex uk-flex-center uk-flex-column'>
-							<h1 className='name-text uk-text-small@s uk-flex uk-text-center uk-flex-column'>
+							<h1 title={ 'I\'m Justice Appiah' }
+							    className='name-text uk-text-small@s uk-flex uk-text-center uk-flex-column'>
 								I'm Justice Appiah
 								
-								<span className="uk-text-center text-description">
+								<span
+									title="Full-Stack Engineer with over 5 years of experience in React JS, Express JS and Android (Java). Strong TDD Advocate, and a SOLID Evangelist."
+									className="uk-text-center text-description">
 									 Full-Stack Engineer with over 5 years of experience in React JS, Express JS and Android (Java).
 									<br/>
 									 Strong TDD Advocate, and a SOLID Evangelist.
 								</span>
 								
-								<span className="uk-text-center text-description">
+								<span
+									title="Occasionally dabble in Vue JS, Meteor, LoopBack JS and Java Springboot"
+									className="uk-text-center text-description">
 								 Occasionally dabble in Vue JS, Meteor, LoopBack JS and Java Springboot.
 							</span>
 							
