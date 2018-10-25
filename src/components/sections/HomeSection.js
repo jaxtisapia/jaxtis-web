@@ -31,7 +31,7 @@ export default class HomeSection extends Component {
 							</span>
 						</div>
 						
-						<div className='uk-flex uk-flex-row uk-flex-wrap uk-flex-center'>
+						<div className='uk-flex uk-flex-row uk-flex-wrap uk-flex-center uk-margin uk-margin-large-top'>
 							{ webConfig.abilityTags.map(function(ability, i) {
 								return <p className='ability-tag uk-flex uk-flex-middle uk-flex-center' key={ i }>{ ability }</p>
 							}) }
