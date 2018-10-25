@@ -1,94 +1,94 @@
-.main-pager{
-  padding:50px;
-  background: #f8f8f8;
-  min-height: 90vh;
+.main-pager {
+    padding: 10px;
+    background: #f8f8f8;
+    min-height: 90vh;
 }
 
-.mobile-menu-active{
-  display: block;
+.mobile-menu-active {
+    display: block;
 }
 
 .mobile-menu-inactive {
-  display: none;
+    display: none;
 }
 
-.profile-header{
-  padding:20px 0px;
+.profile-header {
+    padding: 20px 0px;
 }
 
-.profile-opened{
-  background:#f0f0f0;
-  padding:25px;
-  margin:10px 0px 20px 0px;
+.profile-opened {
+    background: #f0f0f0;
+    padding: 25px;
+    margin: 10px 0px 20px 0px;
 }
 
-.profile-opened-item{
-  padding:15px 0px
+.profile-opened-item {
+    padding: 15px 0px
 }
 
-.profile-opened-item>p{
-  margin: 5px 0px;
+.profile-opened-item > p {
+    margin: 5px 0px;
 }
 
-.card-squeezed{
-  max-width: 500px;
+.card-squeezed {
+    max-width: 500px;
 }
 
-.medium-size-text{
-  font-size: 16px;
+.medium-size-text {
+    font-size: 16px;
 }
 
-.personal-project-item{
-  margin: 20px;
+.personal-project-item {
+    margin: 20px;
 }
 
-.ability-tag{
-  margin:10px;
-  padding:10px;
-  border-radius: 10px;
-  background: #f0f0f0;
+.ability-tag {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f0f0f0;
 }
 
-.name-text{
-  font-size: 5em;
-  font-weight: 100;
-  margin-bottom: 0;
+.name-text {
+    font-size: 5em;
+    font-weight: 100;
+    margin-bottom: 0;
 }
 
-.name-text-greeting{
-  font-size: 3.5em;
-  font-weight: 100;
-  margin-bottom: 0;
-  padding-bottom: 0;
+.name-text-greeting {
+    font-size: 3.5em;
+    font-weight: 100;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.side-menu>ul{
-  padding-left: 0;
+.side-menu > ul {
+    padding-left: 0;
 }
 
-.item-menu-mobile{
-  background: #489b53;
+.item-menu-mobile {
+    background: #489b53;
 }
 
-.big-404{
-  font-size: 6em;
-  font-weight: 100;
-  color: #cecece;
+.big-404 {
+    font-size: 6em;
+    font-weight: 100;
+    color: #cecece;
 }
 
-.description-404{
-  font-size: 2em;
+.description-404 {
+    font-size: 2em;
 }
 
 .logo-centerise {
-  display: block;
-  margin-left: auto;
-  margin-right: auto
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
 .text-description {
-  font-size: 1.2rem;
-  font-weight: 100;
-  margin: 10px;
-  color: #c7c2c2;
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin: 10px;
+    color: #c7c2c2;
 }
