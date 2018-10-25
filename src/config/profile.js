@@ -185,7 +185,7 @@ let configuration = {
 		},
 	],
 	abilityTags : [
-		'react js', 'express js', 'node js', 'springboot java', 'meteor js',
+		'react js', 'express js', 'node js', 'springboot java', 'meteor js', 'graphql', 'rabbit mq',
 		'vue js', 'loopback js', 'SOLID', 'tdd', 'ui / ux design', 'entrepreneur',
 		'cybersecurity enthusiast', 'aspiring politician'
 	]
