@@ -22,13 +22,16 @@ export default class HomeSection extends Component {
 								<span className="uk-text-center text-description">
 									 Full-Stack Engineer with over 5 years of experience in React JS, Express JS and Android (Java).
 									<br/>
-									Strong TDD Advocate, and a SOLID Evangelist.
+									 Strong TDD Advocate, and a SOLID Evangelist.
 								</span>
-							</h1>
-							
-							<span className="uk-text-center text-description">
-								Occasionally dabble in Vue JS, Meteor, LoopBack JS and Java Springboot.
+								
+								<span className="uk-text-center text-description">
+								 Occasionally dabble in Vue JS, Meteor, LoopBack JS and Java Springboot.
 							</span>
+							
+							</h1>
+						
+						
 						</div>
 						
 						<div className='uk-flex uk-flex-row uk-flex-wrap uk-flex-center uk-margin uk-margin-large-top'>
