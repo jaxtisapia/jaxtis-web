@@ -12,7 +12,6 @@ export default class ContactSection extends Component{
                     <p>Want to make enquiries on any of my personal projects?</p>
                     <p>Want help on any of your own projects too?</p>
                     <p>Need help securing your mobile app or website from attackers? I have minimal and 'unprofessional' information and experience</p>
-                    <p>Want to make enquiries on CAR DIAGNOSTICS and any other related issues?</p>
                     <p>Any other general enquiries?</p>
                     </div>
 

@@ -13,29 +13,27 @@ import ResearchSection from "./sections/ResearchSection";
 
 let routeList = require('./route/routes');
 
-export default class MainContent extends  Component{
+export default class MainContent extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
 
-    render(){
+    render() {
         return (
             <div className="container1-page">
 
                 <div className='main-pager'>
                     <Switch>
-                <Route exact path="/" component={HomeSection}/>
-                <Route path={`/${routeList.home}`} component={HomeSection} />
-                <Route path={`/${routeList.profile}`} component={ProfileSection} />
-                <Route path={`/${routeList.contact}`} component={ContactSection} />
-                {/*<Route path={`/${routeList.carDiagnostics}`} component={CarDiagSection} />*/}
-                <Route path={`/${routeList.projects}`} component={PersonalProjectSection} />
-                {/*<Route path={`/${routeList.research}`} component={ResearchSection} />*/}
-                <Route path={`/${routeList.portfolio}`} component={PortfolioSection} />
+                        <Route exact path="/" component={HomeSection}/>
+                        <Route path={`/${routeList.home}`} component={HomeSection}/>
+                        <Route path={`/${routeList.profile}`} component={ProfileSection}/>
+                        <Route path={`/${routeList.contact}`} component={ContactSection}/>
+                        <Route path={`/${routeList.projects}`} component={PersonalProjectSection}/>
+                        <Route path={`/${routeList.portfolio}`} component={PortfolioSection}/>
 
-                    <Route path='*' exact={true} component={Page404Section}/>
+                        <Route path='*' exact={true} component={Page404Section}/>
                     </Switch>
 
                 </div>

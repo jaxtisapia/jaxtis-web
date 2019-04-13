@@ -11,7 +11,7 @@ export default class FooterSection extends Component{
                     <div className="t-center s-text8 p-t-20">
                         <p className='s-text8'>You can duplicate this website for free and use it without any permissions. Find the source code at <a target='_blank' href='https://github.com/jaxtisapia/jaxtis-web'>my Github Repo</a></p>
 
-                        In © 2018 with Lots of Love
+                        In © 2019 with Lots of Love
                     </div>
                 </div>
             </footer>

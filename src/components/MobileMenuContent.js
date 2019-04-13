@@ -40,7 +40,7 @@ export default class MobileMenuContent extends Component{
                     {/*</li>*/}
 
                     <li className="item-menu-mobile">
-                        <Link to={routeList.contact}>Send me a message</Link>
+                        <Link to={routeList.contact}>Send me a message 😀</Link>
                     </li>
                 </ul>
             </nav>

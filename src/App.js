@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import jaxtisLogo from './assets/img/jaxtis-logo.png'
-import userIcon from './assets/img/icon-header-01.png'
-import cartIcon from './assets/img/icon-header-02.png'
+import userIcon from './assets/img/man.svg'
+import cartIcon from './assets/img/suitcase.svg'
 
 import './assets/vendor/bootstrap/css/bootstrap.css'
 import './assets/vendor/css-hamburgers/hamburgers.css'
