@@ -49,25 +49,6 @@ let configuration = {
         ]
       },
       {
-        institution: "Planned Parenthood Association of Ghana",
-        descriptions: [
-          "Volunteer",
-          "September 2017 - June 2018",
-          "Responsible for grouping and analysis of client data",
-          "Social outreach and peer counselling on sexuality and related discussions"
-        ]
-      },
-      {
-        institution: "Ghana Robotics Academy Foundation",
-        descriptions: [
-          "Robotics Trainer/Coach",
-          "April 2014 - Present",
-          "Helping young students in elementary up to Senior High School, gain knowledge of robotics and its powerful applications in Ghana through the Okoree Initiative",
-          "Trained four Senior High Schools for Robotics Inspired Science Education (RISE) competitions",
-          "Trained Junior High Students for the first time to defeat Senior High Students in the national Robotics Inspired Science Education (RISE) competition in 2014, 2015 and 2016"
-        ]
-      },
-      {
         institution: "ASQII Incorporated, Kumasi",
         descriptions: [
           "UI - UX Developer",
@@ -147,7 +128,7 @@ let configuration = {
       title: "WeRise Foundation - Ghana (Company Website)",
       description:
         "WERISE Foundation is a Non-Governmental Organisation that advocates for persons with disabilities, kids with special needs and orphans, by assisting them with the necessary resources, to create an all inclusive environment.",
-      link: "http://www.werisefoundationgh.com/",
+      link: "http://werise.jaxtis.com/",
       image: weriseImage
     },
     {
@@ -161,7 +142,7 @@ let configuration = {
       title: "SurgeGhana - Mobile App, Web App and Website",
       description:
         "SurgeGhana (SurgeGH) is a donation platform. The platform basically links donors in cyclical returns. Project included a website, complex web applications and mobile application, which were all exclusively developed ground up under my supervision and direct involvement",
-      link: null,
+	    link: "http://surge.jaxtis.com",
       image: surgeImage
     },
     {
